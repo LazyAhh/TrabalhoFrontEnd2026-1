@@ -27,4 +27,4 @@ const Biblioteca = () =>{
     )
 }
 
-export default Lista;
+export default Biblioteca;
