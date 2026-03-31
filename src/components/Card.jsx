@@ -36,22 +36,23 @@ const Card = ({livro}) =>{
             </div>
 
             {imagemAberta && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center
-                bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-300"
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-300"
                     onClick={() => setImagemAberta(false)}
                 >
-                    <button
-                        className="absolute -top-10 right-0 text-white text-lg font-bold hover:text-red-400"
-                        onClick={() => setImagemAberta(false)}
-                    >
-                        FECHAR [X]
-                    </button>
+                    <div className="relative max-w-4xl max-h-full">
+                        <button
+                            className="absolute -top-10 right-0 text-white text-lg font-bold hover:text-red-400"
+                            onClick={() => setImagemAberta(false)}
+                        >
+                            Fechar [X]
+                        </button>
 
-                    <img 
-                        src={livro.imagem || 'https://placehold.co/600x400?text=Imagem+não+encontrada'}
-                        alt={livro.nome}
-                        className="max-w-full h-[80vh] rounded-lg shadow-2xl object-contain shadow-white/10"
-                    />
+                        <img 
+                            src={livro.imagem || 'https://placehold.co/600x400?text=Imagem+não+encontrada'}
+                            alt={livro.nome}
+                            className="max-w-full h-[80vh] rounded-lg shadow-2xl object-contain shadow-white/10"
+                        />
+                    </div>
                 </div>
             )}
         </div>
