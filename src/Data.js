@@ -87,7 +87,7 @@ const livros = [
     paginas: "288",
     genero: "Sci-Fi",
     descricao: "Escrito numa noite tempestuosa de 1816 por uma jovem de dezoito anos, Frankenstein carrega desde sua origem algo de sobrenatural. Mary Shelley não inventou apenas um monstro — inventou um espelho. O que o doutor Frankenstein cria em seu laboratório não é simplesmente uma criatura: é a consequência da ambição sem limites, da solidão sem resposta e do orgulho que confunde criação com domínio. Clássico fundador da ficção científica e da literatura gótica, o romance ressoa hoje com a mesma inquietação de sempre — porque a pergunta que ele faz nunca envelheceu. Esta edição especial traz ilustrações de Amanda Miranda e prefácio de Cláudia Fusco.",
-    imagem: "/assets/frankenstein.webp"
+    imagem: "/assets/frankeinstein.webp"
   },
   {
     id: 11,
