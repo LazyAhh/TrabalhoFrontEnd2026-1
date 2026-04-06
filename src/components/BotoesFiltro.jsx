@@ -1,12 +1,21 @@
 import livros from "../Data";
+const BotoesFiltro = ({ generoAtivo, setGeneroAtivo }) => {
+const generos = ["Todos", ...new Set(livros.map((livro) => livro.genero))];
 
-const BotoesFiltro = () =>{
+    return (
+        <div className="">
+            {generos.map((genero) => (
+                <button
+                    key={genero}
+                    onClick={() => setGeneroAtivo(genero)}
+                    data-ativo={generoAtivo === genero}
+                    className="">
+                    {genero}
+                </button>
+            ))}
 
-
-
-    return(
-        <p>Botões de filtro em andamento...</p>
-    )
-}
+        </div>
+    );
+};
 
 export default BotoesFiltro;
