@@ -8,8 +8,7 @@ const generos = ["Todos", ...new Set(livros.map((livro) => livro.genero))];
                 <button
                     key={genero}
                     onClick={() => setGeneroAtivo(genero)}
-                    data-ativo={generoAtivo === genero}
-                    className="">
+                    className={'${genero === generoAtivo ? "classeAtivo" : "classeInativo"'}>
                     {genero}
                 </button>
             ))}
