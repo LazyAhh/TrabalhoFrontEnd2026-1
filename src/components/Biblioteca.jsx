@@ -3,24 +3,24 @@ import { useState } from "react";
 import BotoesFiltro from "./BotoesFiltro";
 import Card from "./Card";
 
-const Biblioteca = () =>{
+const Biblioteca = () => {
 
     const [generoAtivo, setGeneroAtivo] = useState('Todos');
 
-    const livrosFiltrados = livros.filter((livro) =>{
+    const livrosFiltrados = livros.filter((livro) => {
         const correspondeGenero = generoAtivo === 'Todos' || livro.genero === generoAtivo;
 
-       return correspondeGenero;
-     })
+        return correspondeGenero;
+    })
 
-    return(
+    return (
         <div className="h-screen w-full flex flex-col bg-gray-100 p-6 overflow-hidden">
             <div className="flex flex-col gap-4 mb-8">
                 <BotoesFiltro setGeneroAtivo={setGeneroAtivo} generoAtivo={generoAtivo} />
             </div>
 
             <div className="flex flex-1 items-center overflow-x-auto pb-4 gap-6 custom-scrollbar">
-                {livrosFiltrados.map((livro) =>(<Card key={livro.id} livro={livro}/>))}
+                {livrosFiltrados.map((livro) => (<Card key={livro.id} livro={livro} />))}
             </div>
         </div>
     )
