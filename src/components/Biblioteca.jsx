@@ -2,6 +2,7 @@ import livros from "../Data";
 import { useState } from "react";
 import BotoesFiltro from "./BotoesFiltro";
 import SeletorMulti from "./SeletorMulti";
+import SeletorRestrito from "./SeletorRestrito";
 import Card from "./Card";
 import CaixaPesquisa from "./CaixaPesquisa";
 
@@ -36,6 +37,7 @@ const Biblioteca = () => {
 
             <div className="flex flex-row items-center justify-center gap-4 -mt-8">
                 <SeletorMulti setSeletorAtivo={setSeletorAtivo} seletorAtivo={seletorAtivo} />
+                <SeletorRestrito setSeletorRestrito={setSeletorRestrito} seletorRestrito={seletorRestrito} />
             </div>
 
             <div className="flex flex-1 items-center overflow-x-auto pb-4 gap-6 custom-scrollbar">
