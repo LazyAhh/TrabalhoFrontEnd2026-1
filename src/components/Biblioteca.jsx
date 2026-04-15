@@ -1,6 +1,7 @@
 import livros from "../Data";
 import { useState } from "react";
 import BotoesFiltro from "./BotoesFiltro";
+import SeletorMulti from "./SeletorMulti";
 import Card from "./Card";
 import CaixaPesquisa from "./CaixaPesquisa";
 
@@ -31,6 +32,10 @@ const Biblioteca = () => {
             <div className="flex flex-col gap-4 mb-8">
                 <CaixaPesquisa busca={busca} setBusca={setBusca} />
                 <BotoesFiltro setGeneroAtivo={setGeneroAtivo} generoAtivo={generoAtivo} setSeletorAtivo={setSeletorAtivo} seletorAtivo={seletorAtivo} />
+            </div>
+
+            <div className="flex flex-row items-center justify-center gap-4 -mt-8">
+                <SeletorMulti setSeletorAtivo={setSeletorAtivo} seletorAtivo={seletorAtivo} />
             </div>
 
             <div className="flex flex-1 items-center overflow-x-auto pb-4 gap-6 custom-scrollbar">
