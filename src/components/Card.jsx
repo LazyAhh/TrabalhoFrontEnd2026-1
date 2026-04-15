@@ -14,7 +14,7 @@ const Card = ({ livro }) => {
                 />
 
                 <span className="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full uppercase">
-                    {livro.genero || "Nenhum gênero disponível"}
+                    {(livro.genero).join(" / ") || "Nenhum gênero disponível"}
                 </span>
             </div>
 
