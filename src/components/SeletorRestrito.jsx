@@ -9,7 +9,7 @@ const SeletorRestrito = ({ setSeletorRestrito, seletorRestrito }) => {
                         ${seletorRestrito
                         ? 'bg-blue-600 text-white shadow-blue-200 scale-105 transition-transform'
                         : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'}`}>
-                Restrito
+                Filtro restrito
             </button>
         </div>
     )

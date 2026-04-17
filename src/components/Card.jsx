@@ -19,7 +19,7 @@ const Card = ({ livro }) => {
             </div>
 
             {imagemAberta && (
-                <ImagemAberta setImagemAberta={setImagemAberta} imagem={livro.imagem} alt={livro.nome}/>
+                <ImagemAberta setImagemAberta={setImagemAberta} imagem={livro.imagem} alt={livro.nome} />
             )}
         </div>
     );

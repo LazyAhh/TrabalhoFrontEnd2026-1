@@ -76,7 +76,7 @@ const livros = [
     nome: "Project Hail Mary",
     autor: "Andy Weir",
     paginas: "598",
-    genero: ["Sci-Fi", "Aventura"],
+    genero: ["Sci-Fi"],
     descricao: "Ryland Grace acorda sozinho, a milhões de quilômetros de casa, sem memória e com dois cadáveres por companhia. Aos poucos, as lembranças retornam — e com elas, o peso de uma verdade devastadora: ele é o único sobrevivente da última tentativa da humanidade de evitar sua própria extinção. Andy Weir constrói uma aventura interestelar que é, ao mesmo tempo, um exercício brilhante de ficção científica e uma história surpreendentemente humana sobre descoberta, improviso e companhia inesperada. Project Hail Mary leva o leitor a lugares onde a ciência e o maravilhamento se encontram — e onde salvar o mundo depende de resolver, sozinho, o maior quebra-cabeça já imaginado. Ou quase sozinho.",
     imagem: "/assets/project-hail-mary.webp"
   },
@@ -94,7 +94,7 @@ const livros = [
     nome: "It: A Coisa",
     autor: "Stephen King",
     paginas: "1104",
-    genero: ["Terror", "Drama"],
+    genero: ["Terror"],
     descricao: "Derry parece uma cidade comum — e é exatamente aí que mora o perigo. Em 1958, sete crianças que se chamam a si mesmas de Clube dos Otários descobrem que os monstros que cada um via separadamente eram, na verdade, o mesmo: uma presença antiga e maligna, capaz de assumir qualquer forma e encontrar o medo mais fundo de cada um. Stephen King constrói um romance que é simultaneamente terror e ode à infância — ao que ela tem de luminoso e ao que ela tem de irreversível. Quase trinta anos depois, os sete se reencontram: Derry voltou a sangrar, e a promessa feita no verão de 1958 ainda está de pé. Porque algumas coisas só podem ser enfrentadas por quem já as enfrentou antes.",
     imagem: "/assets/it-a-coisa.webp"
   },
