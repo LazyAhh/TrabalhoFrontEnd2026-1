@@ -1,6 +1,6 @@
 import CardGenero from "./CardGenero"
 
-const CardImagem = ({ imagem, alt }) => {
+const CardImagem = ({ setImagemAberta, imagem, alt }) => {
     return (
         <img
             src={imagem || 'https://placehold.co/600x400?text=Imagem+não+encontrada'}

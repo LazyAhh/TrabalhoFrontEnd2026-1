@@ -10,7 +10,7 @@ const Card = ({ livro }) => {
     return (
         <div className="w-[350px] h-[500px] shrink-0 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
             <div className="relative h-[200px] w-full bg-gray-200">
-                <CardImagem imagem={livro.imagem} alt={livro.nome} />
+                <CardImagem setImagemAberta={setImagemAberta} imagem={livro.imagem} alt={livro.nome} />
                 <CardGenero genero={livro.genero} />
             </div>
 
