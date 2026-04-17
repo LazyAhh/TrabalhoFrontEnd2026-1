@@ -14,11 +14,14 @@ const Biblioteca = () => {
     const [busca, setBusca] = useState("");
 
     const restrito = (seletor, livro) => {
-        const restringeGeneros = seletor
-            ? generoAtivo.every((genero) => livro.genero.includes(genero))
-            : generoAtivo.some((genero) => livro.genero.includes(genero));
+        if (seletor) {
+            return (
+                livro.genero.length === generoAtivo.length &&
+                generoAtivo.every((genero) => livro.genero.includes(genero))
+            );
+        }
 
-        return restringeGeneros;
+        return generoAtivo.some((genero) => livro.genero.includes(genero));
     };
 
     const livrosFiltrados = livros.filter((livro) => {
