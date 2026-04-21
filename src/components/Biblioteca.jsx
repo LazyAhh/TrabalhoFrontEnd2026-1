@@ -44,7 +44,16 @@ const Biblioteca = () => {
             </div>
 
             <div className="flex flex-1 items-center overflow-x-auto pb-4 gap-6 custom-scrollbar">
-                {livrosFiltrados.map((livro) => (<Card key={livro.id} livro={livro} />))}
+                {livrosFiltrados.length > 0
+                    ? (
+                        livrosFiltrados.map((livro) => <Card key={livro.id} livro={livro} />)
+                    )
+                    : (
+                        <div className="w-full flex justify-center mb-96">
+                            <p className="text-gray-400 text-2xl font-semibold italic select-none">Nada por aqui...</p>
+                        </div>
+                    )
+                }
             </div>
         </div>
     )
