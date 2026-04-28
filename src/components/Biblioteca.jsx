@@ -1,16 +1,19 @@
 import livros from "../Data";
-import { useState } from "react";
+import { useActionState, useState } from "react";
 import BotoesFiltro from "./BotoesFiltro";
 import SeletorMulti from "./SeletorMulti";
 import SeletorRestrito from "./SeletorRestrito";
 import Card from "./Card";
 import CaixaPesquisa from "./CaixaPesquisa";
+import Favoritar from "./BotaoFavorito";
 
 const Biblioteca = () => {
 
     const [generoAtivo, setGeneroAtivo] = useState(["Todos"]);
     const [seletorAtivo, setSeletorAtivo] = useState(false);
     const [seletorRestrito, setSeletorRestrito] = useState(false);
+    const [favoritar, setFavoritar] = useState(false);
+    const [favoritos, setFavoritos] = useState([]);
     const [busca, setBusca] = useState("");
 
     const restrito = (seletor, livro) => {
@@ -46,14 +49,21 @@ const Biblioteca = () => {
             <div className="flex flex-1 items-center overflow-x-auto pb-4 gap-6 custom-scrollbar">
                 {livrosFiltrados.length > 0
                     ? (
-                        livrosFiltrados.map((livro) => <Card key={livro.id} livro={livro} />)
+                        livrosFiltrados.map((livro) => 
+                        <div className="relative">
+                        <Card key={livro.id} livro={livro} /> 
+                        <Favoritar key={livro.nome} favoritar={favoritar} setFavoritar={setFavoritar} favoritos={favoritos} setFavoritos={setFavoritos} id={livro.id}/>
+                        </div>)
+
                     )
                     : (
                         <div className="w-full flex justify-center mb-96">
                             <p className="text-gray-400 text-2xl font-semibold italic select-none">Nada por aqui...</p>
                         </div>
                     )
+                    
                 }
+                
             </div>
         </div>
     )
